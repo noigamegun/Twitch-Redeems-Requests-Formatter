@@ -70,7 +70,7 @@ while True:
             input_string = file.read()
 
         # Replace the transactionID
-        input_string = re.sub(r'\\\"transactionID\\\":\\\".*?\\\"', '\\\"transactionID\\\":\\\"' + new_id + '\\\"', input_string)
+        input_string = re.sub(r'\\\"transactionID\\\":\\\".*?\\\"', '\\\"transactionID\\\":\\\""+Math.floor(Math.random() *  Number.MAX_SAFE_INTEGER)+"\\\"', input_string)
 
         with open('output-fetch.txt', 'w') as file:
             file.write(input_string)
